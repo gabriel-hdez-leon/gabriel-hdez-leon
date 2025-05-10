@@ -57,7 +57,7 @@ main {
 
 /* Profile Image */
 .profile-img {
-    width: 150px; /* Smaller image */
+    width: 150px; /* Keep it small */
     height: auto;
     border-radius: 50%;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
