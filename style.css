@@ -3,7 +3,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Light gray background */
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Header */
@@ -33,25 +36,67 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Sections */
+/* Main Layout */
 main {
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
 }
 
-/* Hide all sections initially except About */
-.content {
-    display: none;
+/* Profile Section */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    margin-right: 40px;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Social Buttons */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.social-btn {
+    display: inline-block;
+    background-color: #0077cc;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.social-btn:hover {
+    background-color: #005599;
+}
+
+/* Content Container */
+.content-container {
+    width: 70%;
     background-color: white;
     padding: 20px;
-    margin: 20px auto;
-    width: 80%;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#about {
-    display: block; /* Show About by default */
+/* Hide sections initially except About */
+.content {
+    display: none;
 }
 
 /* Links */
