@@ -1,57 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H. Gabriel Hernández-León</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
     <header>
         <h1>H. Gabriel Hernández-León</h1>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#" data-section="about">About</a></li>
+                <li><a href="#" data-section="research">Research</a></li>
+                <li><a href="#" data-section="teaching">Teaching</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about" class="content">
-        <h2>About</h2>
-        <p>I am a consultant for the FAO, preparing to pursue a PhD in Economics at <a href="https://www.ucdavis.edu/">UC Davis</a>. I previously completed my BA and MSc at <a href="https://www.cide.edu/">CIDE (Mexico City)</a>.</p>
-        <p>My research focuses on economic development and political economy, particularly in understanding how economic and political institutions affect development in the long run.</p>
-        <a href="cv.pdf" download>Download my CV</a>
-    </section>
+    <main>
+        <section id="about" class="content">
+            <h2>About</h2>
+            <p>I am a consultant for the FAO, preparing to pursue a PhD in Economics at <a href="https://www.ucdavis.edu/">UC Davis</a>. I previously completed my BA and MSc at <a href="https://www.cide.edu/">CIDE (Mexico City)</a>.</p>
+            <p>My research focuses on economic development and political economy, particularly in understanding how economic and political institutions affect development in the long run.</p>
+            <a href="cv.pdf" download>Download my CV</a>
+        </section>
 
-    <section id="research" class="content">
-        <h2>Research</h2>
-        <h3>Published Papers</h3>
-        <ul>
-            <li><strong>Paper Title</strong> – Brief summary <a href="dropbox-link">Download</a></li>
-        </ul>
-        <h3>Working Papers</h3>
-        <ul>
-            <li><strong>Paper Title</strong> – Brief summary <a href="dropbox-link">Download</a></li>
-        </ul>
-    </section>
+        <section id="research" class="content">
+            <h2>Research</h2>
+            <h3>Published Papers</h3>
+            <ul>
+                <li><strong>Paper Title</strong> – Brief summary <a href="dropbox-link">Download</a></li>
+            </ul>
+            <h3>Working Papers</h3>
+            <ul>
+                <li><strong>Paper Title</strong> – Brief summary <a href="dropbox-link">Download</a></li>
+            </ul>
+        </section>
 
-    <section id="teaching" class="content">
-        <h2>Teaching</h2>
-        <p>Details coming soon.</p>
-    </section>
+        <section id="teaching" class="content">
+            <h2>Teaching</h2>
+            <p>Details coming soon.</p>
+        </section>
+    </main>
 
-    <!-- JavaScript to Handle Section Switching -->
+    <!-- JavaScript for Section Switching -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const navLinks = document.querySelectorAll("nav ul li a");
             const sections = document.querySelectorAll(".content");
 
+            // Hide all sections except About
+            sections.forEach(section => section.style.display = "none");
+            document.getElementById("about").style.display = "block";
+
+            // Add event listeners to navigation links
             navLinks.forEach(link => {
                 link.addEventListener("click", function (event) {
                     event.preventDefault();
-                    const targetId = this.getAttribute("href").substring(1);
+                    const targetId = this.getAttribute("data-section");
 
-                    sections.forEach(section => {
-                        section.style.display = section.id === targetId ? "block" : "none";
-                    });
+                    sections.forEach(section => section.style.display = "none");
+                    document.getElementById(targetId).style.display = "block";
                 });
             });
         });
     </script>
 
 </body>
+</html>

@@ -1,9 +1,12 @@
+/* General Page Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4; /* Light gray background */
 }
 
+/* Header */
 header {
     background-color: #333;
     color: white;
@@ -11,38 +14,11 @@ header {
     text-align: center;
 }
 
+/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-section {
-    padding: 20px;
-    margin: 20px;
-}
-
-.content {
-    display: none; /* Hide all sections */
-    padding: 20px;
-}
-
-#about {
-    display: block; /* Show only the About section initially */
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -52,7 +28,38 @@ nav ul li {
 
 nav ul li a {
     cursor: pointer;
-    color: #333;
+    color: white;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* Sections */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Hide all sections initially except About */
+.content {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about {
+    display: block; /* Show About by default */
+}
+
+/* Links */
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
