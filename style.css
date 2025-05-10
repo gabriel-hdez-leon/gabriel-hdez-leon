@@ -30,3 +30,29 @@ section {
     padding: 20px;
     margin: 20px;
 }
+
+.content {
+    display: none; /* Hide all sections */
+    padding: 20px;
+}
+
+#about {
+    display: block; /* Show only the About section initially */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    cursor: pointer;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
